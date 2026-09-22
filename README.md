@@ -24,13 +24,6 @@ Advertising Disclosure) — same Google Ads compliance approach throughout
 (visible legal name/address/phone, no fake urgency, "from" pricing always
 disclaimed, TCPA-style consent on the lead form).
 
-## Still placeholders — you said these come later
-
-Everything in **`lib/site-config.js`**:
-- `brandName` / `legalName` — domain and LLC details not yet provided
-- `phoneDisplay` / `phoneHref` — phone number not yet provided
-- `domain` — used in metadata and the sitemap
-
 ## Run it locally
 
 ```bash
