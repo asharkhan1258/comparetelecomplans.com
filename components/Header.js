@@ -25,16 +25,13 @@ export default function Header() {
       <TopBanner />
       <header className="sticky top-0 z-50 bg-white border-b rule">
         <div className="container-px max-w-content mx-auto flex items-center justify-between h-16 md:h-[72px]">
-          <Link href="/" className="flex items-center gap-3 shrink-0 whitespace-nowrap">
-            {/* Logo Image */}
+          {/* Logo only (text removed as requested) */}
+          <Link href="/" className="flex items-center shrink-0" aria-label={site.brandName}>
             <img
               src="/logo.png"
               alt={site.brandName}
-              className="h-8 md:h-9 w-auto object-contain shrink-0"
+              className="h-8 md:h-10 w-auto object-contain shrink-0"
             />
-            <span className="font-semibold text-lg text-ink hidden sm:inline-block">
-              {site.brandName}
-            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7 text-[0.95rem] text-ink/75 flex-nowrap">
