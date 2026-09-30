@@ -1,56 +1,44 @@
 import PolicyLayout from "@/components/PolicyLayout";
 import { site } from "@/lib/site-config";
 
-export const metadata = { title: "Advertising Disclosure" };
+export const metadata = { title: "Advertising & Business Disclosure" };
 
 export default function AdvertisingDisclosurePage() {
   return (
-    <PolicyLayout title="Advertising Disclosure" updated="September 1, 2026">
+    <PolicyLayout title="Advertising &amp; Business Disclosure" updated="September 1, 2026">
       <p>
-        We want it to be clear who we are and how this site makes money, especially if
-        you found us through a search ad.
+        This Advertising &amp; Business Disclosure explains how {site.legalName} ("{site.brandName}") operates, our independence, and how we handle advertising and consulting information.
       </p>
 
-      <h2>We are an independent advisory service</h2>
+      <h2>1. Independent Telecom Advisory &amp; Consulting</h2>
       <p>
-        {site.legalName}, operating as {site.brandName}, is not an internet service
-        provider, and is not owned by, or the exclusive agent of, any single provider.
-        We compare publicly available plan information and, where you ask, connect you
-        with a provider's own ordering team.
+        {site.legalName} operates strictly as an independent telecommunications consulting and educational advisory service. We are <strong>not</strong> an internet service provider (ISP), telecommunications carrier, authorized dealer, or reseller. We hold no carrier certifications or dealer licenses.
       </p>
 
-      <h2>How we're compensated</h2>
+      <h2>2. No Internet Sales or Carrier Deals</h2>
       <p>
-        We may receive a referral or marketing fee from a provider when you order
-        service after being connected through this site. This is how the free
-        comparison service is funded. It does not change the price you're quoted or
-        billed by the provider, and it does not influence the factual plan details
-        (speed, price, terms) we display — those come from the provider.
+        We do <strong>not</strong> sell internet plans, process consumer enrollments, or issue special carrier deals. All plan pricing figures and speed tiers displayed on this website are general industry estimates provided for comparative reference only. Users must contact their chosen provider directly to place an order.
       </p>
 
-      <h2>Plan and pricing accuracy</h2>
+      <h2>3. No Affiliate or Referral Fees</h2>
       <p>
-        Plan tiers, speeds, and "from" prices shown on this site are general ranges
-        meant to illustrate what's typically available, not a personalized quote.
-        Because availability and pricing are set by the provider and vary by exact
-        address, we confirm current terms with you by phone or form before you place an
-        order — you will not be charged, and no order will be placed, without your
-        separate confirmation directly with the provider.
+        {site.legalName} does not participate in carrier affiliate programs or collect referral commissions for internet sign-ups. Our consulting information and website guides are provided 100% free for consumers to help them evaluate speed and technology requirements.
       </p>
 
-      <h2>Trademarks</h2>
+      <h2>4. Trademark Ownership</h2>
       <p>
-        Provider and plan names referenced on this site are trademarks of their
-        respective owners and are used for identification and comparison purposes
-        only. Reference to a provider does not imply their endorsement of{" "}
-        {site.legalName}.
+        All provider brand names, trademarks, service marks, and logos referenced on this site belong exclusively to their respective owners. Mention of any provider does not imply endorsement, sponsorship, or affiliation with {site.legalName}.
       </p>
 
-      <h2>Questions</h2>
+      <h2>5. Contact &amp; Questions</h2>
       <p>
-        If anything about how we're paid or how a plan was represented to you is
-        unclear, contact us at {site.email} or {site.phoneDisplay} and we'll clarify or
-        correct it.
+        If you have questions regarding our business practices or independent consulting model, please contact us:
+        <br /><br />
+        <strong>{site.legalName}</strong>
+        <br />
+        {site.address.line1}, {site.address.city}, {site.address.state} {site.address.zip}
+        <br />
+        Email: {site.email} · Phone: {site.phoneDisplay}
       </p>
     </PolicyLayout>
   );

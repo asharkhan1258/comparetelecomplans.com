@@ -7,89 +7,50 @@ export default function TermsPage() {
   return (
     <PolicyLayout title="Terms of Service" updated="September 1, 2026">
       <p>
-        These Terms of Service ("Terms") govern your use of this website, operated by{" "}
-        {site.legalName}. By using this site, you agree to these Terms. This is a
-        general-purpose template — have it reviewed by a qualified attorney before
-        publishing.
+        These Terms of Service ("Terms") govern your use of the website located at{" "}
+        {site.domain} operated by {site.legalName} ("we," "us," or "our"), doing business as {site.brandName}. By using this site, you agree to these Terms.
       </p>
 
-      <h2>What this site is</h2>
+      <h2>1. Scope of Service &amp; Business Model</h2>
       <p>
-        {site.brandName} is an independent advisory and referral service for home
-        internet plans. We are not an internet service provider, and we do not build,
-        own, or operate any internet network. Comparisons, plan tiers, and pricing
-        ranges shown on this site are informational and illustrative; actual
-        availability, pricing, speeds, and terms are set solely by the relevant
-        provider and confirmed directly with you before you order.
+        {site.brandName} operates strictly as an independent telecommunications consulting and educational advisory platform. We are <strong>not</strong> an internet service provider (ISP), telecommunications carrier, dealer, or affiliate. We do not sell internet plans, process sign-ups, issue carrier deals, or receive affiliate commissions. Information presented on this site is for general educational comparison. Final availability, contract terms, installation fees, and billing are established directly between you and your chosen provider.
       </p>
 
-      <h2>Using this site</h2>
+      <h2>2. Permissible Use</h2>
+      <p>By using this website, you represent and warrant that:</p>
       <ul>
-        <li>You must be at least 18 years old to submit a request through this site.</li>
-        <li>You agree to provide accurate information when submitting a form or calling.</li>
-        <li>
-          You won't use this site to submit false requests, scrape or resell our
-          content, or attempt to interfere with its normal operation.
-        </li>
+        <li>You are at least 18 years old and possess the legal authority to enter into these Terms.</li>
+        <li>All information you submit via forms or telephone consultation is accurate.</li>
+        <li>You will not use this site for fraudulent, malicious, or automated bot activities.</li>
       </ul>
 
-      <h2>No guarantee of availability or pricing</h2>
+      <h2>3. Pricing &amp; Availability Disclaimer</h2>
       <p>
-        Serviceability, speeds, and pricing shown or discussed are estimates based on
-        information available to us and can change without notice. Final terms are
-        determined by the provider at the time you order, and may differ from anything
-        shown on this site.
+        Broadband plan details, speed estimates, and pricing tiers represent general industry ranges. They do not constitute a binding quote or financial contract. Final pricing, equipment rentals, taxes, and promotional terms must be verified directly with the provider.
       </p>
 
-      <h2>Referral relationship</h2>
+      <h2>4. Intellectual Property Rights</h2>
       <p>
-        If you choose to order service through a provider we connect you with, that
-        provider may pay {site.legalName} a referral or marketing fee. This does not
-        change the price you pay the provider. Your service agreement, billing
-        relationship, and any disputes about your internet service are with the
-        provider, not with {site.legalName}. See our{" "}
-        <a href="/policies/advertising-disclosure">Advertising Disclosure</a> for more.
+        All original content, branding, design elements, and layout structures belong to {site.legalName}. All third-party provider names, trademarks, logos, and brand assets referenced belong to their respective trademark holders and are used solely for identification and comparative reference.
       </p>
 
-      <h2>Intellectual property</h2>
+      <h2>5. Limitation of Liability</h2>
       <p>
-        The text, graphics, and design of this site belong to {site.legalName} or its
-        licensors and may not be copied or reused without permission, except as needed
-        to browse the site normally.
+        To the maximum extent permitted by applicable law, {site.legalName} shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or any service agreements concluded directly with third-party providers.
       </p>
 
-      <h2>Disclaimer of warranties</h2>
+      <h2>6. Governing Law</h2>
       <p>
-        This site and the information on it are provided "as is," without warranties
-        of any kind, express or implied, including accuracy, completeness, or fitness
-        for a particular purpose.
+        These Terms shall be governed by and construed in accordance with the laws of the State of Georgia, United States, without regard to its conflict of law principles. Any legal proceedings shall be brought exclusively in the courts located in DeKalb County, Georgia.
       </p>
 
-      <h2>Limitation of liability</h2>
+      <h2>7. Contact Us</h2>
       <p>
-        To the fullest extent permitted by law, {site.legalName} is not liable for any
-        indirect, incidental, or consequential damages arising from your use of this
-        site or reliance on information shown here, including differences between
-        pricing shown here and the price ultimately offered by a provider.
-      </p>
-
-      <h2>Governing law</h2>
-      <p>
-        These Terms are governed by the laws of the state in which {site.legalName} is
-        incorporated or headquartered, without regard to conflict-of-law principles.
-        Replace this with the specific governing-law clause your counsel recommends.
-      </p>
-
-      <h2>Changes to these Terms</h2>
-      <p>
-        We may revise these Terms from time to time. Continued use of the site after a
-        change means you accept the revised Terms.
-      </p>
-
-      <h2>Contact us</h2>
-      <p>
-        {site.legalName} · {site.address.line1}, {site.address.city}, {site.address.state}{" "}
-        {site.address.zip} · {site.email}
+        <strong>{site.legalName}</strong>
+        <br />
+        {site.address.line1}, {site.address.city}, {site.address.state} {site.address.zip}
+        <br />
+        Email: {site.email} · Phone: {site.phoneDisplay}
       </p>
     </PolicyLayout>
   );

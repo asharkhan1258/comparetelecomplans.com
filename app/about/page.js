@@ -2,84 +2,112 @@ import { SectionHeading } from "@/components/ui";
 import { site } from "@/lib/site-config";
 
 export const metadata = {
-  title: "About",
-  description: `Who ${site.brandName} is, how we're paid, and how we handle your information.`,
+  title: "About Our Independent Consulting Service",
+  description: `Learn about ${site.brandName} (${site.legalName}). We are an independent telecom advisory and consulting service — not an internet seller, dealer, or affiliate.`,
 };
 
 const values = [
-  { title: "The price, stated plainly", body: "If a number has conditions attached — a promo window, a fee, a contract — we say so next to it." },
-  { title: "No obligation, ever", body: "Comparing plans with us doesn't enroll you in anything. Ordering happens directly with the provider you choose." },
-  { title: "Fewer, better calls", body: "One clear conversation about what fits your address beats five follow-ups you didn't ask for." },
+  {
+    title: "Zero Sales Pitches or Deals",
+    body: "We do not sell internet plans, issue custom promotional deals, or process sign-ups. We provide neutral consulting information."
+  },
+  {
+    title: "Not an Affiliate or Dealer",
+    body: "We hold no carrier certificates, dealer licenses, or affiliate agreements. We receive no affiliate commissions from telecom companies."
+  },
+  {
+    title: "100% Free Consumer Guidance",
+    body: "Our website guides, address lookup tools, and phone consulting are provided 100% free of charge to help consumers navigate broadband options."
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="container-px max-w-content mx-auto py-16 md:py-20 border-b rule">
-        <h1 className="font-semibold text-[2rem] md:text-[2.4rem] leading-[1.15] text-ink max-w-2xl">
-          We compare internet providers so you don't have to call five of them yourself
-        </h1>
-        <p className="mt-5 text-ink/70 leading-relaxed max-w-2xl">
-          {site.legalName}, operating as {site.brandName}, exists to fix a simple,
-          annoying problem: figuring out which internet provider actually serves your
-          address, and what their plans really cost, usually takes calling around and
-          getting different answers each time.
-        </p>
-      </section>
-
-      <section className="container-px max-w-content mx-auto py-16 md:py-20 border-b rule grid md:grid-cols-2 gap-12">
-        <div>
-          <h2 className="font-semibold text-xl text-ink">What we are</h2>
-          <p className="mt-3 text-sm text-ink/65 leading-relaxed">
-            We're an independent advisory and referral service. We're not owned by,
-            and don't exclusively represent, any single internet provider. When you
-            tell us your address, we check which providers actually serve it and lay
-            out their plans clearly.
-          </p>
-        </div>
-        <div>
-          <h2 className="font-semibold text-xl text-ink">How we're paid</h2>
-          <p className="mt-3 text-sm text-ink/65 leading-relaxed">
-            When you choose to order service through a provider we connect you with,
-            that provider may pay us a referral fee. This doesn't change your price —
-            you pay the provider directly, at the price they quote you.
+      {/* Header */}
+      <section className="container-px max-w-content mx-auto py-14 md:py-18 border-b rule">
+        <div className="max-w-3xl">
+          <span className="bg-blue/10 text-blue font-semibold text-xs px-3 py-1 border border-blue/20">
+            About Our Company
+          </span>
+          <h1 className="mt-3 font-semibold text-[2rem] md:text-[2.6rem] leading-[1.15] text-ink">
+            Independent Home Internet Advisory &amp; Consulting
+          </h1>
+          <p className="mt-5 text-ink/70 leading-relaxed text-base">
+            {site.legalName} (doing business as {site.brandName}) exists to provide consumers with clear, objective, and independent advice on home internet options, technology differences, and speed planning.
           </p>
         </div>
       </section>
 
+      {/* Business Details Grid */}
+      <section className="container-px max-w-content mx-auto py-16 md:py-20 border-b rule grid md:grid-cols-2 gap-10">
+        <div className="border rule bg-white p-6 md:p-8 space-y-4">
+          <h2 className="font-semibold text-xl text-ink">What We Are</h2>
+          <p className="text-sm text-ink/70 leading-relaxed">
+            We are a private, independent telecom advisory and educational consulting service. We do not construct, operate, or sell internet service. When you use our address lookup tool or call our hotline, we discuss which technology types (Fiber, Coaxial Cable, 5G Wireless, or Satellite Broadband) serve your street and help you determine what bandwidth fits your usage.
+          </p>
+          <div className="p-3 bg-offwhite border rule text-xs text-ink/65">
+            <strong>Important Disclosure:</strong> We do not sell internet plans, place orders on behalf of consumers, or issue carrier deals. Users order directly from their chosen provider.
+          </div>
+        </div>
+
+        <div className="border rule bg-white p-6 md:p-8 space-y-4">
+          <h2 className="font-semibold text-xl text-ink">Zero Affiliate or Dealer Ties</h2>
+          <p className="text-sm text-ink/70 leading-relaxed">
+            {site.legalName} holds no carrier certificates, dealer licenses, or affiliate agreements with any telecommunications carrier. We do not receive referral fees or affiliate commissions for plan sales.
+          </p>
+          <p className="text-sm text-ink/70 leading-relaxed">
+            This independence guarantees that our guidance remains neutral, objective, and focused solely on consumer clarity.
+          </p>
+        </div>
+      </section>
+
+      {/* Core Principles */}
       <section className="container-px max-w-content mx-auto py-16 md:py-20 border-b rule bg-offwhite">
-        <SectionHeading title="Three things we hold ourselves to" />
-        <div className="mt-10 grid sm:grid-cols-3 gap-x-10 gap-y-8">
+        <SectionHeading title="Our Consulting Commitments" />
+        <div className="mt-10 grid sm:grid-cols-3 gap-6">
           {values.map((v) => (
-            <div key={v.title}>
-              <h3 className="font-semibold text-ink">{v.title}</h3>
-              <p className="mt-1 text-sm text-ink/65 leading-relaxed">{v.body}</p>
+            <div key={v.title} className="bg-white border rule p-6">
+              <h3 className="font-semibold text-ink text-base">{v.title}</h3>
+              <p className="mt-2 text-sm text-ink/70 leading-relaxed">{v.body}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="container-px max-w-content mx-auto py-16 md:py-20 grid md:grid-cols-2 gap-12">
-        <div>
-          <h2 className="font-semibold text-xl text-ink">Where we are</h2>
-          <p className="mt-3 text-sm text-ink/65 leading-relaxed">
-            {site.legalName}
-            <br />
-            {site.address.line1}
-            <br />
-            {site.address.city}, {site.address.state} {site.address.zip}
-            <br />
-            {site.address.country}
-          </p>
-          <p className="mt-4 text-sm text-ink/65">{site.hours}</p>
+      {/* Corporate Entity Details */}
+      <section className="container-px max-w-content mx-auto py-16 md:py-20 grid md:grid-cols-2 gap-10">
+        <div className="border rule bg-white p-6 md:p-8 space-y-3">
+          <h2 className="font-semibold text-xl text-ink">Legal Corporate Information</h2>
+          <div className="text-sm text-ink/75 leading-relaxed space-y-1">
+            <p className="font-semibold text-ink">{site.legalName}</p>
+            <p>Doing Business As: {site.brandName}</p>
+            <p>{site.address.line1}</p>
+            <p>{site.address.city}, {site.address.state} {site.address.zip}</p>
+            <p>{site.address.country}</p>
+          </div>
+          <p className="text-xs text-ink/50 pt-2 border-t rule">{site.hours}</p>
         </div>
-        <div>
-          <h2 className="font-semibold text-xl text-ink">Questions about a plan?</h2>
-          <p className="mt-3 text-sm text-ink/65 leading-relaxed">
-            Call <a href={`tel:${site.phoneHref}`} className="text-blue underline underline-offset-2">{site.phoneDisplay}</a> or
-            email <a href={`mailto:${site.email}`} className="text-blue underline underline-offset-2">{site.email}</a>, and
-            we'll walk through what's available at your address.
+
+        <div className="border rule bg-white p-6 md:p-8 space-y-4">
+          <h2 className="font-semibold text-xl text-ink">Questions or Consultation Request</h2>
+          <p className="text-sm text-ink/70 leading-relaxed">
+            Need guidance on home internet speeds or technology types? Reach out to an advisor:
           </p>
+          <div className="space-y-2 text-sm text-ink/80 font-medium">
+            <p>
+              Consulting Hotline:{" "}
+              <a href={`tel:${site.phoneHref}`} className="text-blue underline">
+                {site.phoneDisplay}
+              </a>
+            </p>
+            <p>
+              Email:{" "}
+              <a href={`mailto:${site.email}`} className="text-blue underline">
+                {site.email}
+              </a>
+            </p>
+          </div>
         </div>
       </section>
     </>
