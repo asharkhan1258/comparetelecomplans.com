@@ -6,8 +6,12 @@ export default function Footer() {
     <footer className="border-t rule bg-offwhite text-ink">
       <div className="container-px max-w-content mx-auto py-14 grid gap-10 md:grid-cols-[1.3fr_0.8fr_1fr_1.2fr]">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 bg-blue inline-block"></span>
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt={site.brandName}
+              className="h-8 w-auto object-contain shrink-0"
+            />
             <p className="font-semibold text-lg text-ink">{site.brandName}</p>
           </div>
           <p className="mt-3 text-sm text-ink/70 leading-relaxed max-w-xs">

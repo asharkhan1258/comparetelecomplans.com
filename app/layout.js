@@ -22,6 +22,14 @@ export const metadata = {
     template: `%s — ${site.brandName}`,
   },
   description: site.shortDescription,
+  icons: {
+    icon: [
+      { url: "/icon.png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   robots: {
     index: true,
     follow: true,
